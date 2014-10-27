@@ -95,4 +95,28 @@ public class IntegerTreeNode {
 			return result;
 		}
 	}
+
+	public int depth() {
+		int leftDepth = 0;
+		int rightDepth = 0;
+		if (left == null && right == null) {
+			return 0;
+		}else if (left != null && right == null) {
+			return leftDepth += 1 + left.depth();
+		}else if (left == null && right != null) {
+			return rightDepth += 1 + right.depth();
+		}else {
+			leftDepth += 1 + left.depth();
+			rightDepth += 1 + right.depth();
+			return max(leftDepth, rightDepth);
+		}
+	}
+
+	public int max(int one, int two) {
+		if (one > two) {
+			return one;
+		}else {
+			return two;
+		}
+	}
 }
