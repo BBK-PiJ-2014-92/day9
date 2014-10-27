@@ -9,5 +9,6 @@ public class IntegerTreeNodeTest {
 		tn.add(11);
 		tn.add(12);
 		System.out.println(tn.toString());
+		System.out.println(tn.simpletoString());
 	}
 }
