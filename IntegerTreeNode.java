@@ -79,4 +79,20 @@ public class IntegerTreeNode {
 			return result;
 		}
 	}
+
+	public String simpletoString() {
+		String result = "[" + this.value;
+		if (left == null && right == null) {
+			return result;
+		}else if (left == null && right != null) {
+			result += " " + right.simpletoString() + "]";
+			return result;
+		}else if (left != null && right == null) {
+			result += " " + left.simpletoString() + "]";
+			return result;
+		}else {
+			result += " " + left.simpletoString() + "]" + " " + right.simpletoString() + "]";
+			return result;
+		}
+	}
 }
